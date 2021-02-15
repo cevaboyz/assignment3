@@ -51,13 +51,14 @@ makeCacheMatrix <- function(x = matrix()) #the default argument is an empty matr
 cacheSolve <- function(x, ...)
 {
     inversematrix <- x$getinversematrix()  ## return cached matrix inverse if it's been already computed
-    {
+    
 
         if(!is.null(inversematrix))
+        {
             message("checking the memory banks")
             return(inversematrix)
 
-    }
+        }
 
         data <- x$get()  # compute inverse of matrix for a new value of x
         
